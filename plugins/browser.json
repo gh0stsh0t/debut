@@ -1,0 +1,21 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "rj.phils.lean"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "rj.phils.lean"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "rj.phils.lean"
+        }
+    },
+    "dependent_plugins": {}
+}

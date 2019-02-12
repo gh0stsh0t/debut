@@ -1,3 +1,4 @@
+
 var app = new Framework7({
   // App root element
   root: '#app',
@@ -36,4 +37,6 @@ var app = new Framework7({
 });
 
 var mainView = app.views.create('.view-main');
-
+var guestsView = app.views.create('.view-guests');
+var eventsView = app.views.create('.view-events');
+var dinnerView = app.views.create('.view-dinner');

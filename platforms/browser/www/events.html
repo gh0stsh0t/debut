@@ -13,7 +13,14 @@
     <link rel="stylesheet" href="lib/framework7/css/framework7.min.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Dancing+Script"/>
+
   </head>
+
+  <style>
+  .text { font-family: Dancing Script; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: Dancing Script; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Dancing Script; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Dancing Script; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Dancing Script; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5667px; }
+  </style>
 
   <body>
     <!-- App root element -->
@@ -34,14 +41,14 @@
                                 <span class="ios-only">Back</span>
                                 </a>
                         </div>
-                  <div class="title">The Night's Events</div>
+                  <div class="title" class="text">The Night's Events</div>
                 </div>
             </div>
 
             <div class = "page-content">
                 <p>What's What and When!</p>
                     <ol>
-                        <li><a class = "link popup-open" href = "#" data-popup = ".popup-opening">Opening Salvo</a></li>
+                        <li><a class = "link popup-open" href = "#" data-popup = ".popup-opening"><p class="text">Opening Salvo</p></a></li>
                         <li><a class = "link popup-open" href = "#" data-popup = ".popup-roses">18 Roses</a></li>
                         <li><a class = "link popup-open" href = "#" data-popup = ".popup-dinner">Dinner</a></li>
                         <li><a class = "link popup-open" href = "#" data-popup = ".popup-candles">18 Candles</a></li>
@@ -168,8 +175,6 @@
                             <p><a class="link popup-close" href="#">Back</a></p>
                         </div>
                 </div>
-
-                <a href="/">Home</a>
             </div>
         </div>
       </div>

@@ -7,6 +7,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Color theme for statusbar -->
     <meta name="theme-color" content="#2196f3">
+    <meta http-equiv="Content-Security-Policy" content="default-src * gap: ws: https://ssl.gstatic.com;style-src * 'unsafe-inline' 'self' data: blob:;script-src * 'unsafe-inline' 'unsafe-eval' data: blob:;img-src * data: 'unsafe-inline' 'self' content:;">
     <!-- Your app title -->
     <title>Debut AI</title>
     <!-- Path to Framework7 Library CSS -->
@@ -14,21 +15,39 @@
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/styles.css">
     <style>
-    .swiper-container {
-      width: 100%;
-      height: 100%;
-    }
-    .swiper-slide {
-      font-size: 18px;
-      height: 100%;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-    }
+    .demo-swiper .swiper-slide {
+  font-size: 25px;
+  font-weight: 300;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  color: #000;
+}
+.demo-swiper .swiper-slide {
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  background: #fff;
+  width: 100%;
+}
+.demo-swiper {
+  margin: 0px 0 35px;
+  font-size: 18px;
+  height: 100%;
+}
+.demo-swiper.demo-swiper-auto .swiper-slide {
+  width: 85%;
+}
+.demo-swiper.demo-swiper-auto .swiper-slide:nth-child(2n) {
+  width: 70%;
+}
+.demo-swiper.demo-swiper-auto .swiper-slide:nth-child(3n) {
+  width: 30%;
+}
     </style>
   </head>
 
   <body>
-    <!-- App root element -->
+
     <div id="app">
       <!-- Statusbar overlay -->
       <div class="statusbar"></div>
@@ -38,50 +57,64 @@
         <!-- Initial Page, "data-name" contains page name -->
         <div data-name="home" class="page">
 
-            <div class="navbar">
-                <div class="navbar-inner">
-                </div>
-            </div>
+          <div class="navbar">
+              <div class="navbar-inner">
+              </div>
+          </div>
 
-            <div class = "page-content">
-                <div data-swiper="{freeMode: true,scrollbar: {el: '.swiper-scrollbar',},mousewheel: true}", data-space-between="0" data-direction="vertical" class="swiper-container swiper-init">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="images/skeleton.png" style='height: 100%; width: 100%; object-fit: contain'></img>
-                        <p><center> Jennie at 18
-                        <br>
-                        <a href="/events/">Events</a>
-                        <br>
-                        <a href="/guests/">Guests</a>
-                        <br>
-                        <a href="/dinner/">Dinner</a>
-                        </center></p>
-                    </div>
-                    <div class="swiper-slide"><object type="text/html" data="events.html" width="100%" height="100%"></object></div>
-                    <div class="swiper-slide"><object type="text/html" data="guests.html" width="100%" height="100%"></object></div>
-                    <div class="swiper-slide"><object type="text/html" data="dinner.html" width="100%" height="100%"></object></div>
+          <div class = "page-content">
+              <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="10" data-direction="vertical" class="swiper-container swiper-init demo-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-slide view view-main">
+                      <video id="video" style='height: 100%; width: 100%;' loop autoplay webkit-playsinline>
+                        <source src="/images/asd.mp4" type="video/mp4">
+                      </video>
+                      <p><center> Jennie at 18
+                      <br>
+                      <a href="/events/">Events</a>
+                      <br>
+                      <a href="/guests/">Guests</a>
+                      <br>
+                      <a href="/dinner/">Dinner</a>
+                      </center></p>
+                      <a href="/events/" style="visibility: hidden" id="e" data-view=".view-events"></a>
+                      <a href="/guests/" style="visibility: hidden" id="g" data-view=".view-guests"></a>
+                      <a href="/dinner/" style="visibility: hidden" id="d" data-view=".view-dinner"></a>
                   </div>
-                  <div class="swiper-scrollbar"><div class="swiper-scrollbar-drag" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms; height: 284.937px;"></div></div>
+                  <div class="swiper-slide"><div class="view view-init view-events">a</div></div>
+                  <div class="swiper-slide"><div class="view view-init view-guests">a</div></div>
+                  <div class="swiper-slide"><div class="view view-init view-dinner">a</div></div>
                 </div>
-            </div>
+              </div>
+          </div>
         </div>
       </div>
     </div>
-
     <!-- Path to Framework7 Library JS-->
     <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
     <!-- Path to your app js-->
     <script type="text/javascript" src="js/my-app.js"></script>
-    <script> 
-    var swiper = new Swiper('.swiper-container', {
-      direction: 'vertical',
-      slidesPerView: 'auto',
-      freeMode: true,
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-      mousewheel: true,
-    });
+    <script>
+    /*
+    var $$ = Dom7;
+    console.log("poakyoooo");
+    $$(document).once('load', function (e) {
+       document.getElementById('e').click();
+      document.getElementById('g').click();
+      document.getElementById('d').click();
+      console.log("poakyoooo");
+});   */   
+
+
+    function loadPages()
+    {
+      document.getElementById('e').click();
+      document.getElementById('g').click();
+      document.getElementById('d').click();
+      console.log("poakyoooo")
+    }
+   window.onload = loadPages;
     </script>
   </body>
 </html>

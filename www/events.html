@@ -14,12 +14,38 @@
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/styles.css">
 
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Dancing+Script"/>
-
   </head>
 
   <style>
-  .text { font-family: Dancing Script; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: Dancing Script; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Dancing Script; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Dancing Script; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Dancing Script; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5667px; }
+  	@font-face {
+  		font-family: Pacifico;
+  		src: url(fonts/Pacifico-Regular.ttf);
+	}
+
+	@font-face {
+		font-family: Oswald
+		src: url(fonts/Oswald-Regular.ttf);
+	}
+
+	@font-face {
+		font-family: OpenSans
+		src: url(fonts/OpenSans-Regular.ttf);
+	}
+
+	h1 {
+		font-family: Pacifico;
+		font-size: 36px;
+	}
+
+	a {
+		font-family: Pacifico;
+		font-size: 24px;
+	}
+
+	p {
+		font-family: Oswald;
+		font-size: 14px;
+	}
   </style>
 
   <body>
@@ -32,23 +58,10 @@
       <div class="view view-main">
         <!-- Initial Page, "data-name" contains page name -->
         <div data-name="home" class="page">
-
-            <div class="navbar">
-                <div class="navbar-inner">
-                        <div class="left">
-                                <a class="link back">
-                                <i class="icon icon-back"></i>
-                                <span class="ios-only">Back</span>
-                                </a>
-                        </div>
-                  <div class="title" class="text">The Night's Events</div>
-                </div>
-            </div>
-
             <div class = "page-content">
-                <p>What's What and When!</p>
+                <h1>What's What and When!</h1>
                     <ol>
-                        <li><a class = "link popup-open" href = "#" data-popup = ".popup-opening"><p class="text">Opening Salvo</p></a></li>
+                        <li><a class = "link popup-open" href = "#" data-popup = ".popup-opening">Opening Salvo</a></li>
                         <li><a class = "link popup-open" href = "#" data-popup = ".popup-roses">18 Roses</a></li>
                         <li><a class = "link popup-open" href = "#" data-popup = ".popup-dinner">Dinner</a></li>
                         <li><a class = "link popup-open" href = "#" data-popup = ".popup-candles">18 Candles</a></li>
@@ -58,11 +71,10 @@
                         <li><a class = "link popup-open" href = "#" data-popup = ".popup-thank">A Thank You From Debutee To You</a></li>
                         <li><a class = "link popup-open" href = "#" data-popup = ".popup-parents">Parents' Message</a></li>
                     </ol>
-
                 <div class="popup popup-opening">
                         <div class="block">
                             <div class="card">
-                                <div class="card-header">Opening Salvo</div>
+                                <div class="card-header"><a>Opening Salvo</a></div>
                                 <div class="card-content card-content-padding">
                                     <center><img src = "images/opening-salvo.jpg" width = "100%"></center>
                                     <center><p>A performance by XB Gensan to start things off with a bang.</p></center>
@@ -75,7 +87,7 @@
                 <div class="popup popup-roses">
                         <div class="block">
                             <div class="card">
-                                <div class="card-header">18 Roses</div>
+                                <div class="card-header"><a>18 Roses</a></div>
                                 <div class="card-content card-content-padding">
                                     <center><img src = "images/rose-bite.jpg" width = "50%"></center>
                                     <center><p>Alam na.</p></center>
@@ -88,7 +100,7 @@
                 <div class="popup popup-dinner">
                         <div class="block">
                             <div class="card">
-                                <div class="card-header">Dinner</div>
+                                <div class="card-header"><a>Dinner</a></div>
                                 <div class="card-content card-content-padding">
                                     <center><img src = "images/dinner.jpg" width = "100%"></center>
                                     <center><p>Kainan na.</p></center>
@@ -101,7 +113,7 @@
                 <div class="popup popup-candles">
                         <div class="block">
                             <div class="card">
-                                <div class="card-header">18 Candles</div>
+                                <div class="card-header"><a>18 Candles</a></div>
                                 <div class="card-content card-content-padding">
                                     <center><img src = "images/18-candles.jpg" width = "100%"></center>
                                     <center><p>Sindihan beh.</p></center>
@@ -114,7 +126,7 @@
                 <div class="popup popup-bills">
                         <div class="block">
                             <div class="card">
-                                <div class="card-header">18 Bills</div>
+                                <div class="card-header"><a>18 Bills</a></div>
                                 <div class="card-content card-content-padding">
                                     <center><img src = "images/scrooge.jpeg" width = "100%"></center>
                                     <center><p>Rich.</p></center>
@@ -127,7 +139,7 @@
                 <div class="popup popup-dance">
                         <div class="block">
                             <div class="card">
-                                <div class="card-header">Dance Number</div>
+                                <div class="card-header"><a>Dance Number</a></div>
                                 <div class="card-content card-content-padding">
                                     <center><img src = "images/hasht5.jpg" width = "100%"></center>
                                     <center><p>Manayaw tang tanan.</p></center>
@@ -140,7 +152,7 @@
                 <div class="popup popup-video">
                         <div class="block">
                             <div class="card">
-                                <div class="card-header">Special Video</div>
+                                <div class="card-header"><a>Special Video</a></div>
                                 <div class="card-content card-content-padding">
                                     <center><img src = "images/follow-your-stroke.jpg" width = "100%"></center>
                                     <center><p>SDE lang sa.</p></center>
@@ -153,7 +165,7 @@
                 <div class="popup popup-thank">
                         <div class="block">
                             <div class="card">
-                                <div class="card-header">Thank You Message</div>
+                                <div class="card-header"><a>Thank You Message</a></div>
                                 <div class="card-content card-content-padding">
                                     <center><img src = "images/thank-you.jpg" width = "100%"></center>
                                     <center><p>Lamat.</p></center>
@@ -166,7 +178,7 @@
                 <div class="popup popup-parents">
                         <div class="block">
                             <div class="card">
-                                <div class="card-header">Parent's Message</div>
+                                <div class="card-header"><a>Parent's Message</a></div>
                                 <div class="card-content card-content-padding">
                                     <center><img src = "images/good-job.jpg" width = "100%"></center>
                                     <center><p>Lamat usab.</p></center>

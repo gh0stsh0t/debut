@@ -17,8 +17,8 @@ var app = new Framework7({
       url: 'about.html',
     },
     {
-          path: '/guests/',
-          url: 'guests.html',
+        path: '/guests/',
+        url: 'guests.html',
     },
     {
         path: '/events/',
@@ -27,6 +27,10 @@ var app = new Framework7({
     {
         path: '/dinner/',
         url: 'dinner.html',
+    },
+    {
+      path: '/developers/',
+      url: 'developers.html',
     },
     {
       path: '/',
@@ -40,3 +44,4 @@ var mainView = app.views.create('.view-main');
 var guestsView = app.views.create('.view-guests');
 var eventsView = app.views.create('.view-events');
 var dinnerView = app.views.create('.view-dinner');
+var developersView = app.views.create('.view-developers');
